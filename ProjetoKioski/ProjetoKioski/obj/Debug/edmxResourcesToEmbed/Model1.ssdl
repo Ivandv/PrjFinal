@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BancoKioskiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cartao">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="status" Type="nchar" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="telefone" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="endereco" Type="nvarchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="funcionario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cpf" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="pis" Type="nchar" MaxLength="25" Nullable="false" />
+    <Property Name="fone" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="endereco" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rg" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="sexo" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="dt_nasc" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mesa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descricao" Type="nchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pagamento">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="desconto" Type="real" />
+    <Property Name="id_pedido" Type="int" Nullable="false" />
+    <Property Name="valor" Type="real" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pedido">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="id_cartao" Type="int" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="id_mesa" Type="int" Nullable="false" />
+    <Property Name="id_funcionario" Type="int" Nullable="false" />
+    <Property Name="status" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="valorTotal" Type="real" />
+  </EntityType>
+  <EntityType Name="pedidoproduto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_pedido" Type="int" Nullable="false" />
+    <Property Name="id_produto" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="produto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descricao" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="medida" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="valor" Type="real" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_pagamento_pedido">
+    <End Role="pedido" Type="Self.pedido" Multiplicity="1" />
+    <End Role="pagamento" Type="Self.pagamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pedido">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="pagamento">
+        <PropertyRef Name="id_pedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedido_cartao">
+    <End Role="cartao" Type="Self.cartao" Multiplicity="1" />
+    <End Role="pedido" Type="Self.pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cartao">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="pedido">
+        <PropertyRef Name="id_cartao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedido_cliente">
+    <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+    <End Role="pedido" Type="Self.pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="pedido">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedido_funcionario">
+    <End Role="funcionario" Type="Self.funcionario" Multiplicity="1" />
+    <End Role="pedido" Type="Self.pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funcionario">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="pedido">
+        <PropertyRef Name="id_funcionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedido_mesa">
+    <End Role="mesa" Type="Self.mesa" Multiplicity="1" />
+    <End Role="pedido" Type="Self.pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mesa">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="pedido">
+        <PropertyRef Name="id_mesa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedidoproduto_pedido">
+    <End Role="pedido" Type="Self.pedido" Multiplicity="1" />
+    <End Role="pedidoproduto" Type="Self.pedidoproduto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pedido">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="pedidoproduto">
+        <PropertyRef Name="id_pedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pedidoproduto_produto">
+    <End Role="produto" Type="Self.produto" Multiplicity="1" />
+    <End Role="pedidoproduto" Type="Self.pedidoproduto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="pedidoproduto">
+        <PropertyRef Name="id_produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BancoKioskiModelStoreContainer">
+    <EntitySet Name="cartao" EntityType="Self.cartao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cliente" EntityType="Self.cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="funcionario" EntityType="Self.funcionario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mesa" EntityType="Self.mesa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pagamento" EntityType="Self.pagamento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pedido" EntityType="Self.pedido" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pedidoproduto" EntityType="Self.pedidoproduto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="produto" EntityType="Self.produto" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_pagamento_pedido" Association="Self.FK_pagamento_pedido">
+      <End Role="pedido" EntitySet="pedido" />
+      <End Role="pagamento" EntitySet="pagamento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedido_cartao" Association="Self.FK_pedido_cartao">
+      <End Role="cartao" EntitySet="cartao" />
+      <End Role="pedido" EntitySet="pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedido_cliente" Association="Self.FK_pedido_cliente">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="pedido" EntitySet="pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedido_funcionario" Association="Self.FK_pedido_funcionario">
+      <End Role="funcionario" EntitySet="funcionario" />
+      <End Role="pedido" EntitySet="pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedido_mesa" Association="Self.FK_pedido_mesa">
+      <End Role="mesa" EntitySet="mesa" />
+      <End Role="pedido" EntitySet="pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedidoproduto_pedido" Association="Self.FK_pedidoproduto_pedido">
+      <End Role="pedido" EntitySet="pedido" />
+      <End Role="pedidoproduto" EntitySet="pedidoproduto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pedidoproduto_produto" Association="Self.FK_pedidoproduto_produto">
+      <End Role="produto" EntitySet="produto" />
+      <End Role="pedidoproduto" EntitySet="pedidoproduto" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

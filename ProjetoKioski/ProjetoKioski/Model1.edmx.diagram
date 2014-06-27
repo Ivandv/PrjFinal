@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="29c76821622749788f3ffeed49e9026b" Name="Diagram1">
+        <EntityTypeShape EntityType="BancoKioskiModel.cartao" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoKioskiModel.cliente" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoKioskiModel.funcionario" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoKioskiModel.mesa" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoKioskiModel.pagamento" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoKioskiModel.pedido" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoKioskiModel.pedidoproduto" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoKioskiModel.produto" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="BancoKioskiModel.FK_pedido_cartao" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoKioskiModel.FK_pedido_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoKioskiModel.FK_pedido_funcionario" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoKioskiModel.FK_pedido_mesa" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoKioskiModel.FK_pagamento_pedido" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoKioskiModel.FK_pedidoproduto_pedido" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoKioskiModel.FK_pedidoproduto_produto" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

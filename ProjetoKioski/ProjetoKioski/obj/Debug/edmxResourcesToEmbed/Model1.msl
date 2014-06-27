@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BancoKioskiModelStoreContainer" CdmEntityContainer="BancoKioskiEntities">
+    <EntitySetMapping Name="cartaos">
+      <EntityTypeMapping TypeName="BancoKioskiModel.cartao">
+        <MappingFragment StoreEntitySet="cartao">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clientes">
+      <EntityTypeMapping TypeName="BancoKioskiModel.cliente">
+        <MappingFragment StoreEntitySet="cliente">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="endereco" ColumnName="endereco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="funcionarios">
+      <EntityTypeMapping TypeName="BancoKioskiModel.funcionario">
+        <MappingFragment StoreEntitySet="funcionario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="pis" ColumnName="pis" />
+          <ScalarProperty Name="fone" ColumnName="fone" />
+          <ScalarProperty Name="endereco" ColumnName="endereco" />
+          <ScalarProperty Name="rg" ColumnName="rg" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="dt_nasc" ColumnName="dt_nasc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mesas">
+      <EntityTypeMapping TypeName="BancoKioskiModel.mesa">
+        <MappingFragment StoreEntitySet="mesa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pagamentoes">
+      <EntityTypeMapping TypeName="BancoKioskiModel.pagamento">
+        <MappingFragment StoreEntitySet="pagamento">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="desconto" ColumnName="desconto" />
+          <ScalarProperty Name="id_pedido" ColumnName="id_pedido" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pedidoes">
+      <EntityTypeMapping TypeName="BancoKioskiModel.pedido">
+        <MappingFragment StoreEntitySet="pedido">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="id_cartao" ColumnName="id_cartao" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="id_mesa" ColumnName="id_mesa" />
+          <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="valorTotal" ColumnName="valorTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pedidoprodutoes">
+      <EntityTypeMapping TypeName="BancoKioskiModel.pedidoproduto">
+        <MappingFragment StoreEntitySet="pedidoproduto">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_pedido" ColumnName="id_pedido" />
+          <ScalarProperty Name="id_produto" ColumnName="id_produto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="produtoes">
+      <EntityTypeMapping TypeName="BancoKioskiModel.produto">
+        <MappingFragment StoreEntitySet="produto">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="medida" ColumnName="medida" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,30 @@
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\bin\Debug\ProjetoKioski.exe.config
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\bin\Debug\ProjetoKioski.exe
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\bin\Debug\ProjetoKioski.pdb
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\bin\Debug\EntityFramework.dll
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\bin\Debug\EntityFramework.xml
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.csprojResolveAssemblyReference.cache
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.Form1.resources
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.Properties.Resources.resources
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.csproj.GenerateResource.Cache
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.exe
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.pdb
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.Principal.resources
+C:\Users\Wagner\Documents\Visual Studio 2013\Projects\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.CadastroMesa.resources
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\bin\Debug\ProjetoKioski.exe.config
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.exe
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.pdb
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.csprojResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.CadastroMesa.resources
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.Form1.resources
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.Principal.resources
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.Properties.Resources.resources
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\obj\Debug\ProjetoKioski.csproj.GenerateResource.Cache
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\bin\Debug\ProjetoKioski.exe
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\bin\Debug\ProjetoKioski.pdb
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\bin\Debug\EntityFramework.dll
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\bin\Debug\EntityFramework.xml
+C:\Users\Ivan\Documents\TutorialProjetos\ProjetoKioski\ProjetoKioski\bin\Debug\EntityFramework.SqlServer.xml
